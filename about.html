@@ -1,0 +1,47 @@
+<html>
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content = "Levi Stringer">
+        <title> Tohacks | Home </title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="shortcut icon" href="https://media.licdn.com/dms/image/C4E0BAQHOxmY4okF-Pw/company-logo_200_200/0?e=2127081600&v=beta&t=ZgIN5fpGgbunvEFB_jawKSG9UecD73ulA77gMjjGbVk"/>
+      </head>
+        <script src = "jscode.js"></script>
+      <body>
+        <header>
+        <div class="container">
+          <div id="branding">
+            <h1><span class="title">About the Project</span></h1>
+          </div>
+          <nav>
+            <u1>
+              <li class ="current"><a href="test.html">Home</a></li>
+              <li class ="current"><a href="About.html">About</a></li>
+              <li class ="current"><a href="Team.html">Team</a></li>
+            </u1>
+          </nav>
+        </div>
+        </header>
+
+          <section id="boxes">
+
+            <div class="container ">
+              <div class = "row col-md-6">
+            	<div class = "col-md-5">
+              <h3> What it does </h3>
+        <p>This website allows users to search for locations on google maps and check whether the reviews are real or not. It does this by running the reviews against a machine learning classifier, which outputs the polarity (i.e. real or fake) and the percent accuracy of that.</P>
+          <h3> How we built it </h3>
+          <p>The architecture of the website is a REST API that is consumed by a Javascript frontend. The backend REST API was made using Flask, and the machine learning model was trained using Keras. The dataset used to train this model was taken from an open-sourced dataset from Cornell University. The API is hosted using a Heroku cloud instance. The frontend was made using Javascript, CSS/Bootstrap, HTML, and a google maps widget. To make a search, the API endpoint is hit with a POST request with the PlaceID of the location (taken from the maps widget). The API then does a get request to the Google Places API, grabs the review data, and runs it against the trained model and makes a prediction. The accuracy of the prediction is then appended to the data taken from the Places API and is sent back to the frontend as a JSON response. The frontend then displays this data to the user.. </p>
+          	</div>
+          	<div class = "col-md-5">
+          		<img src="http://www.beyondtheborder.com/wp/wp-content/uploads/2016/07/Tips-for-collecting-reviews-for-your-web-shop.jpg"
+          		style = "margin:auto; width: 100%; height: 100%; ">
+            </div>
+          	</div>
+            </div>
+          </section>
+
+
+        </body>
+      </html>
